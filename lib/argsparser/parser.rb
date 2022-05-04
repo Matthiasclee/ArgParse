@@ -29,8 +29,10 @@ module ArgsParser
             a = b[0].split("")
 
             rmode = :new_switch
+            c = 0
             a.each do |x|
               x = x.to_sym
+              c = c + 1
 
               if rmode == :new_switch
                 if expected_switches.keys.include?(x)
@@ -46,7 +48,7 @@ module ArgsParser
                   end
                 end
               elsif rmode[:arg_for_switch]
-                @@switches[rmode[:arg_for_switch]][:arg] = x
+                @@switches[rmode[:arg_for_switch]][:arg] = arg[c..arg.length-1]
                 rmode = :new_switch
               end
             end
