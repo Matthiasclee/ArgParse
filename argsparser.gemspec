@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Matthias Lee"]
   s.email       = 'matthias@matthiasclee.com'
   s.files       = Dir.glob("**/*")
-  s.files.delete("argsparser-#{ArgsParser::Version}.gem")
+  s.files.delete("argparse-#{ArgsParser::Version}.gem")
   s.require_paths = ["lib"]
+  s.homepage = "https://github.com/Matthiasclee/ArgParse"
 end
