@@ -1,7 +1,7 @@
 require_relative "lib/argsparser/version.rb"
 
 Gem::Specification.new do |s|
-  s.name        = 'argsparser'
+  s.name        = 'argparse'
   s.version     = ArgsParser::Version
   s.summary     = 'A gem for parsing command line arguments'
   s.description = s.summary
