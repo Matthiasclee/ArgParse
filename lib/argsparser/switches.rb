@@ -12,7 +12,7 @@ module ArgsParser
           return @s[a.to_sym][:arg]
         end
       else
-        return false
+        return nil
       end
     end
   end
