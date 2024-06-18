@@ -42,7 +42,7 @@ module ArgsParser
               if rmode == :new_switch
                 if expected_switches.keys.include?(x)
                   if expected_switches[x][:has_argument]
-                    if b[1] && x == a.reverse[0].to_sym
+                    if b[1] && a.length == 1
                       @@switches[x] = {arg: b[1]}
                     else
                       rmode = {arg_for_switch: x}
@@ -55,6 +55,7 @@ module ArgsParser
               elsif rmode[:arg_for_switch]
                 @@switches[rmode[:arg_for_switch]][:arg] = arg[c..arg.length-1]
                 rmode = :new_switch
+                break
               end
             end
 
