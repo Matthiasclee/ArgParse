@@ -6,9 +6,14 @@ module ArgsParser
       @@data = []
 
       read = :new_arg
+      rmode = nil
       args.each do |arg|
         if read == :new_arg
-          if arg.start_with?("--")
+          if rmode == :data
+            @@data << arg
+          elsif arg == "--"
+            rmode = :data
+          elsif arg.start_with?("--")
             b = arg.sub("--", "").split("=")
             a = b[0].to_sym
 

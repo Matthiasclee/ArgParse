@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
   s.files.delete("argparse-#{ArgsParser::Version}.gem")
   s.require_paths = ["lib"]
   s.homepage = "https://github.com/Matthiasclee/ArgParse"
+  s.license     = "CC-BY-NC-SA-4.0"
 end
